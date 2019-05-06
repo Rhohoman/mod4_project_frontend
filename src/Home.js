@@ -22,11 +22,13 @@ class Home extends React.Component{
     handleAddClick = (restaurantObj) => {
         //if clicked add to wish
         let tempWishArray = this.state.wishRestaurants
-        tempWishArray = [...tempWishArray,restaurantObj]
 
+        if (!tempWishArray.includes(restaurantObj)){
+        tempWishArray = [...tempWishArray,restaurantObj]
         this.setState({
             wishRestaurants: tempWishArray
         })
+        }
     }
 
     handleRemove = (restaurantObj) => {
