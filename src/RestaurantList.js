@@ -6,10 +6,9 @@ class RestaurantList extends React.Component{
     render(){
         return(
             <div>
-                <h2>RestaurantList</h2>
-                <ul>
-                    <RestaurantCard/>
-                </ul>
+                {this.props.restaurants.filter(restaurant => restaurant.name.includes(this.props.searchTerm)).map(restaurant => {
+                    return <RestaurantCard restaurantObj={restaurant} handleClick={this.props.handleAddClick}/>
+                })}
             </div>
         )
     }

@@ -2,10 +2,29 @@
   text-align: center;
 } */
 
-.header {
+.banner {
   font-weight: bold;
-  padding: 60px;
+  padding: 50px;
   text-align: center;
   background: #1abc9c;
+  color:white;
+  font-size: 60px;
 }
+
+.container {
+  display: flex;
+}
+
+.restaurantlist {
+  width: 50%;
+}
+
+.wishlist {
+  width:50%;
+}
+
+.searchbar input[type=text]{
+  font-size: 17px;
+}
+
 
